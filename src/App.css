@@ -2,37 +2,170 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #442e82;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.557);
+  position: sticky;
+  top: 0;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+  gap: 20px; /* Increase space between products */
+  margin: 20px; /* Space around the product list */
+}
+
+.product-card {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* Space items evenly */
+  border: 1px solid #ccc; /* Optional: border for product cards */
+  padding: 20px; /* Padding inside product cards */
+  text-align: center; /* Center text in product cards */
+  max-width: 210px; /* Set a maximum width for product cards */
+  margin: auto; /* Center product card within grid item */
+  height: 450px; /* Set a fixed height for all cards */
+  border-radius: 15px;
+  color: rgba(74, 75, 77, 0.978);
+}
+
+.product-card img {
+  width: 100%; /* Make the image take the full width of the card */
+  height: 150px; /* Set a fixed height for all images */
+  object-fit: contain; /* Ensure the image covers the area without distortion */
+  border-radius: 4px; /* Optional: round the corners of the image */
+}
+
+.product-card button {
+  background-color: #007bff;
   color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.product-card button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  margin-right: 10px;
+  width: 245px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Remove pointer for specific 'Add n to cart' button */
+.no-pointer {
+  background-color: green;
+  cursor: default; /* Removes pointer cursor */
+  margin-top: 20px;
+}
+
+.no-pointer:hover {
+  background-color: green; /* Prevent hover color change */
+}
+
+/* App.css */
+
+/* Header Flexbox Layout */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Logo Styles */
+.logo img {
+  height: 135px;
+}
+
+/* Header Content (Welcome text and search form) */
+.header-content {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.search-form {
+  margin-top: 10px;
+}
+
+.search-form input {
+  padding: 5px;
+  width: 200px;
+}
+
+.search-form button {
+  padding: 5px 10px;
+}
+
+/* Header Icons (Account and Cart Icons) */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 20px ;
+}
+
+.cart-icon {
+  display: flex;
+  align-items: center;
+}
+
+.cart-total {
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.checkout {
+  margin: 20px;
+}
+
+.checkout table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.checkout table th, .checkout table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.checkout-total {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
 }
